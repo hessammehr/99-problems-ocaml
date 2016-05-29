@@ -6,3 +6,4 @@
 * [Problem 4](https://ocaml.org/learn/tutorials/99problems.html#Findthenumberofelementsofalisteasy): Find the number of elements of a list. (easy)
 * [Problem 5](https://ocaml.org/learn/tutorials/99problems.html#Reversealisteasy): Reverse a list. (easy)
 * [Problem 6](https://ocaml.org/learn/tutorials/99problems.html#Findoutwhetheralistisapalindromeeasy): Find out whether a list is a palindrome. (easy)
+* [Problem 7](https://ocaml.org/learn/tutorials/99problems.html#Flattenanestedliststructuremedium): Flatten a nested list structure. (medium)
