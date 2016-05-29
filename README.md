@@ -10,3 +10,4 @@
 * [Problem 8](https://ocaml.org/learn/tutorials/99problems.html#Eliminateconsecutiveduplicatesoflistelementsmedium): Eliminate consecutive duplicates of list elements. (medium)
 * [Problem 9](https://ocaml.org/learn/tutorials/99problems.html#Packconsecutiveduplicatesoflistelementsintosublistsmedium): Pack consecutive duplicates of list elements into sublists. (medium)
 * [Problem 10](https://ocaml.org/learn/tutorials/99problems.html#Runlengthencodingofalisteasy): Run-length encoding of a list. (easy)
+* [Problem 11](https://ocaml.org/learn/tutorials/99problems.html#Modifiedrunlengthencodingeasy): Modified run-length encoding. (easy)
