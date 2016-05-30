@@ -4,10 +4,10 @@ type 'a rle =
 
 let encode lst =
   let rec encode_acc l acc cur = match (l,cur) with
-      ([],_) -> cur::acc
+      ([],One _) | ([],Many (_,_)) -> cur::acc
     | (x::xs,One y) when x=y -> encode_acc xs acc (Many (2,x))
     | (x::xs,(Many (n,y))) when x=y -> encode_acc xs acc (Many ((n+1),x))
-    | (x::xs,_) -> encode_acc xs (cur::acc) (One x) in
+    | (x::xs,One _) | (x::xs, Many (_,_)) -> encode_acc xs (cur::acc) (One x) in
   match lst with
     [] -> []
   | x::xs -> List.rev (encode_acc xs [] (One x))

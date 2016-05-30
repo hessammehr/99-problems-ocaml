@@ -11,3 +11,4 @@
 * [Problem 9](https://ocaml.org/learn/tutorials/99problems.html#Packconsecutiveduplicatesoflistelementsintosublistsmedium): Pack consecutive duplicates of list elements into sublists. (medium)
 * [Problem 10](https://ocaml.org/learn/tutorials/99problems.html#Runlengthencodingofalisteasy): Run-length encoding of a list. (easy)
 * [Problem 11](https://ocaml.org/learn/tutorials/99problems.html#Modifiedrunlengthencodingeasy): Modified run-length encoding. (easy)
+* [Problem 12](https://ocaml.org/learn/tutorials/99problems.html#Decodearunlengthencodedlistmedium) Decode a run-length encoded list. (medium)
