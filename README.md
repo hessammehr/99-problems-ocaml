@@ -12,3 +12,6 @@
 * [Problem 10](https://ocaml.org/learn/tutorials/99problems.html#Runlengthencodingofalisteasy): Run-length encoding of a list. (easy)
 * [Problem 11](https://ocaml.org/learn/tutorials/99problems.html#Modifiedrunlengthencodingeasy): Modified run-length encoding. (easy)
 * [Problem 12](https://ocaml.org/learn/tutorials/99problems.html#Decodearunlengthencodedlistmedium) Decode a run-length encoded list. (medium)
+* [Problem 14](https://ocaml.org/learn/tutorials/99problems.html#Duplicatetheelementsofalisteasy) Duplicate the elements of a list. (easy)
+* [Problem 15](https://ocaml.org/learn/tutorials/99problems.html#Replicatetheelementsofalistagivennumberoftimesmedium) Replicate the elements of a list a given number of times. (medium)
+* [Problem 16](https://ocaml.org/learn/tutorials/99problems.html#DropeveryN39thelementfromalistmedium) Drop every N'th element from a list. (medium)
