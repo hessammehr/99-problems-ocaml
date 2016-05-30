@@ -1,7 +1,7 @@
 let drop lst every =
   let rec drop_ac l acc n = match l with
       [] -> acc
-    | x::xs when (n mod every) = every-1 -> drop_ac xs acc 0
+    | x::xs when (n mod every) = every-1 -> drop_ac xs acc (n+1)
     | x::xs -> drop_ac xs (x::acc) (n+1) in
   List.rev (drop_ac lst [] 0)
 
