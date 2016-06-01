@@ -15,3 +15,4 @@
 * [Problem 14](https://ocaml.org/learn/tutorials/99problems.html#Duplicatetheelementsofalisteasy) Duplicate the elements of a list. (easy)
 * [Problem 15](https://ocaml.org/learn/tutorials/99problems.html#Replicatetheelementsofalistagivennumberoftimesmedium) Replicate the elements of a list a given number of times. (medium)
 * [Problem 16](https://ocaml.org/learn/tutorials/99problems.html#DropeveryN39thelementfromalistmedium) Drop every N'th element from a list. (medium)
+* [Problem 99](https://ocaml.org/learn/tutorials/99problems.html#Crosswordpuzzlehard) Crossword puzzle. (hard)
