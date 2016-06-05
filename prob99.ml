@@ -1,21 +1,26 @@
-type cell = Black
-          | Empty
-          | Filled of char
+(* open Core.Std *)
 
-type coord = {r:int; c:int}
+(* type cell = Black *)
+(*           | Empty *)
+(*           | Filled of char *)
 
-type puzzle = {cells:cell array; size:coord}
+(* type coord = {r:int; c:int} *)
 
-type direction = Horizontal | Vertical
+(* type puzzle = {cells:cell array; size:coord} *)
 
-type cursor = {p:puzzle; start:coord; d:direction}
+(* type direction = Horizontal | Vertical *)
 
-let puz_cursor puz n dir =
-  match dir with
-    Horizontal -> {p:puzzle; r:n; c:0; d:Horizontal}
-  | Vertical -> {p: puzzle; r:0; c:n; d:Vertical}
+(* type cursor = {p:puzzle; start:coord; d:direction} *)
 
-let get cur n =
+(* type range = {c:cursor; len:int} *)
+
+(* let rows puz n = *)
+(*   let {r;c} = puz.size in *)
+(*   let idxs =  *)List.range ~stride:c 0 (r*c) in
+  List.map ~f:(fun i->{p=puz; start={r=i; c=0}; d=Horizontal}) idxs
+  (* {p:puz; start:{r;c}; d:Horizontal} *)
+
+let get_cur cur n =
   match cur.d with
   Horizontal -> Array.get cur.p ()
 
