@@ -1,7 +1,6 @@
 open Core.Std
-open Core_extended.Std
+open Core_bench.Std
 
-module Puzzle = struct
 (* ---- Types ---- *)
 type cell = Black
           | Empty
@@ -9,7 +8,9 @@ type cell = Black
 type coord = {r:int; c:int}
 type puzzle = {cells:cell array; size:coord}
 type direction = Horizontal | Vertical
-type range = direction * coord * int (* (direction, start, length) *)
+type range = {dir: direction;
+              loc: coord;
+              len: int}
 
 (* ---- Functions ---- *)
 let random_blank size =
@@ -17,8 +18,8 @@ let random_blank size =
   let cells = Array.init (size.r*size.c) f in
   {cells; size}
 
-let row p n : range = (Horizontal, {r=n;c=0}, p.size.c)
-let col p n : range = (Vertical, {r=0;c=n}, p.size.r)
+let row p n : range = {dir=Horizontal; loc={r=n;c=0}; len=p.size.c}
+let col p n : range = {dir=Vertical; loc={r=0;c=n}; len=p.size.r}
 
 let rows p : range list =
   List.range 0 p.size.r
@@ -30,31 +31,33 @@ let cols p : range list =
 
 let coords range n =
   match range with
-    (Horizontal,s,_) -> {r:r;c:c+n}
-  | (Vertical,s,_) -> {r:r+n;c:c}
+    (Horizontal,{r;c},_) -> {r=r;c=c+n}
+  | (Vertical,{r;c},_) -> {r=r+n;c=c}
 
 let get p {r;c} =
-  let C = p.size.c in
-  let idx = r*C + c in
+  let col = p.size.c in
+  let idx = r*col + c in
   p.cells.(idx)
 
 let to_char = function Black -> '#'
                      | Empty -> '_'
                      | Filled c -> c
 
-let print_range r =
-  let (_,_,n) = r in
-  List.range 0 n
-  |> List.mapia
-end
+(* let print_range r = *)
+(*   let (_,_,n) = r in *)
+(*   List.range 0 n *)
+(*   |> List.map  *)
 
-let main () =
-  let open Puzzle in
-  let p = random_blank {r=4;c=5} in
-  Color_print.yellow_printf "Tests:\n";
-  (p, rows p, cols p)
 
-let _ = main ()
+(* let main () = *)
+(*   let p = random_blank {r=4;c=5} in *)
+(*   print_endline "Tests:\n"; *)
+(*   (p, rows p, cols p); *)
+(*   let (_,s) = Map.max_elt_exn words in *)
+(*   print_endline(List.hd_exn(s)); *)
+(*   () *)
+
+(* let _ = main () *)
 
 (* type cursor = {p:puzzle; start:coord; d:direction} *)
 
